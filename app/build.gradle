@@ -1,6 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+
+    /**
+     * Annotation processors are supported in Kotlin with the kapt compiler plugin.
+     * In a nutshell, you can use libraries such as Dagger or Data Binding in your Kotlin projects.
+     *
+     * Reference: https://kotlinlang.org/docs/kapt.html
+     */
     id 'kotlin-kapt'
 }
 
@@ -34,13 +41,13 @@ android {
         jvmTarget = '1.8'
     }
 
+    // This code is required to implement DataBinding
     buildFeatures {
         dataBinding true
     }
 }
 
 dependencies {
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
