@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        // setOnClickListener() for Button
+        // setOnClickListener() for Button.
         binding.button.setOnClickListener {
             Toast.makeText(this@MainActivity, "You clicked me", Toast.LENGTH_SHORT).show()
         }
